@@ -730,7 +730,7 @@ main{position:relative;z-index:1}
 <button class="bgm" id="bgmBtn" type="button" aria-label="背景音乐开关">
   <span class="bars"><i></i><i></i><i></i><i></i></span><span id="bgmTxt">开启配乐</span>
 </button>
-<audio id="bgm" src="audio/bgm.mp3" loop preload="auto"></audio>
+<audio id="bgm" src="audio/bgm.mp3" loop preload="none"></audio>
 
 <main>
 
@@ -2336,7 +2336,7 @@ PATTERNS.forEach(function(p, i){
     +     '</figure>'
     +     '<figure class="cell" style="--d:.44s">'
     +       '<div class="box"><span class="badge">影像短片</span>'
-    +         '<video class="clip" src="' + m.video + '" poster="' + m.poster + '" muted loop playsinline preload="metadata"></video>'
+    +         '<video class="clip" src="' + m.video + '" poster="' + m.poster + '" muted loop playsinline preload="none"></video>'
     +         '<button class="mute" type="button" aria-label="声音开关">🔇</button>'
     +       '</div>'
     +       '<figcaption><b>影像短片</b><span>' + esc(p.trio.clipT) + '</span></figcaption>'
@@ -2471,7 +2471,10 @@ var ioPlay = new IntersectionObserver(function(entries){
     var vid = sec.querySelector('video');
     if(en.isIntersecting){
       if(svg){ var idx = parseInt(sec.getAttribute('data-idx'), 10); mountPattern(svg, idx).play(); }
-      if(vid){ vid.play().catch(function(){}); }
+      if(vid){
+        if(!vid.__loaded){ try{ vid.load(); }catch(e){} vid.__loaded = true; }
+        vid.play().catch(function(){});
+      }
     } else {
       if(svg && svg.__driver) svg.__driver.stop();
       if(vid) vid.pause();
@@ -2666,6 +2669,7 @@ function fadeVol(target, ms){
 
 function playBgm(){
   if(!bgmEl || bgmOn) return;
+  if(!bgmEl.__loaded){ try{ bgmEl.load(); }catch(e){} bgmEl.__loaded = true; }
   bgmEl.volume = 0;
   var pr = bgmEl.play();
   if(!pr || !pr.then) return;
