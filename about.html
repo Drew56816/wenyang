@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>创作说明与 AIGC 合规披露 · 纹以载道</title>
+<meta name="theme-color" content="#0e0c0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%239c3226'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23fbf3e2' font-family='KaiTi,serif'%3E纹%3C/text%3E%3C/svg%3E">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Songti SC","PingFang SC","Microsoft YaHei",serif;
+    background:radial-gradient(900px 500px at 20% 0%,rgba(176,138,62,.12),transparent 62%),
+               radial-gradient(700px 460px at 88% 100%,rgba(156,50,38,.10),transparent 60%),#0e0c0a;
+    color:#ded3bf;line-height:1.9;padding:clamp(28px,6vw,72px) clamp(16px,5vw,40px) 72px;
+  }
+  .wrap{max-width:860px;margin:0 auto}
+  a.back{
+    display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+    color:#c9a25c;font-size:13px;letter-spacing:.12em;margin-bottom:28px;
+  }
+  h1{
+    font-family:"KaiTi","STKaiti",serif;font-weight:400;
+    font-size:clamp(26px,5vw,42px);letter-spacing:.14em;
+    background:linear-gradient(175deg,#f6ead0,#dcb877 55%,#b78b45);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    margin-bottom:10px;
+  }
+  .sub{font-size:12px;letter-spacing:.3em;color:#8d8270;margin-bottom:clamp(28px,5vw,48px)}
+  h2{
+    font-family:"KaiTi","STKaiti",serif;font-weight:400;font-size:clamp(18px,2.6vw,24px);
+    letter-spacing:.12em;color:#e8cf98;margin:clamp(34px,5vw,52px) 0 14px;
+    padding-left:12px;border-left:3px solid #9c3226;
+  }
+  h3{font-size:15px;letter-spacing:.06em;color:#c9b48a;margin:22px 0 8px;font-weight:400}
+  p{font-size:14.5px;color:#b7ab94;margin-bottom:12px;text-align:justify}
+  ul{margin:0 0 14px 20px}
+  li{font-size:14px;color:#b7ab94;margin-bottom:7px}
+  strong{color:#e8cf98;font-weight:400}
+  em{font-style:normal;color:#d98a6a}
+  table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:13px}
+  th,td{border:1px solid rgba(201,162,92,.22);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:rgba(201,162,92,.10);color:#e8cf98;font-weight:400;letter-spacing:.06em;white-space:nowrap}
+  td{color:#b0a48d}
+  .todo{color:#ffb37a;background:rgba(255,140,60,.10);padding:1px 7px;border-radius:4px;
+    border:1px dashed rgba(255,140,60,.4);font-size:12.5px}
+  .note{
+    padding:14px 16px;border-radius:10px;background:rgba(156,50,38,.10);
+    border-left:3px solid #9c3226;font-size:13.5px;color:#c3b69e;margin:16px 0 22px;
+  }
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}}
+  .card{background:rgba(255,255,255,.035);border:1px solid rgba(201,162,92,.18);
+    border-radius:10px;padding:14px 16px}
+  .card b{display:block;color:#c9a25c;font-weight:400;font-size:12px;letter-spacing:.14em;margin-bottom:6px}
+  .card span{font-size:13px;color:#a99d86;line-height:1.8}
+  .foot{margin-top:56px;padding-top:20px;border-top:1px solid rgba(201,162,92,.16);
+    font-size:11.5px;letter-spacing:.2em;color:#6e6455;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="./">← 返回长卷</a>
+
+  <h1>创作说明与 AIGC 合规披露</h1>
+  <div class="sub">纹以载道 · 中国传统纹样数字长卷</div>
+
+  <div class="note">
+    本页依据《2026 年第十四届全国大学生数字媒体科技作品及创意竞赛》AIGC 类数字创意作品创作赛项
+    「作品要求」第（2）条编制，逐项说明原创构思、AI 工具名称、使用环节、主要流程、人工干预、
+    二次创作、团队贡献与合规情况。
+  </div>
+
+  <h2>一 · 原创构思</h2>
+  <p>
+    作品要回答的问题是：<strong>为什么传统纹样长成这样？</strong>
+  </p>
+  <p>
+    我们的判断是：纹样不是装饰，而是<em>秩序</em>——先有骨架，再有母题，最后成纹。
+    因此整条长卷不按「图案图鉴」来组织，而按<strong>骨架 → 母题 → 变体</strong>来拆解：
+    每引入一个纹样，先给它的几何骨架，再给母题，最后给变体与流变。
+  </p>
+  <p>
+    第二个判断来自本校。桂林理工大学源于 1956 年的桂林地质学校，
+    <strong>地质是这所学校的出身</strong>；校内地质博物馆馆藏标本五万余件。
+    我们把这套拆解方法原样用在本校藏品上，发现石头里天然长出的纹样
+    （陨石的三组平行交纹、棕榈叶的掌状放射、石膏的玫瑰状晶簇）
+    与人工纹样（壮锦菱格、兽面中轴对称、云纹团花）<em>遵循同一套秩序</em>。
+    这一层是作品区别于通用纹样科普的关键，也是本校资源才能支撑的论证。
+  </p>
+
+  <h2>二 · AI 工具与使用环节</h2>
+  <p>本作品在以下环节使用了生成式人工智能工具，逐项列明如下：</p>
+  <table>
+    <tr><th>环节</th><th>使用工具（名称 / 版本）</th><th>AI 承担的具体工作</th></tr>
+    <tr><td>影像短片</td><td><span class="todo">待填写 · 工具名称+版本</span></td><td>四个纹样的动态演示影像（云纹 / 缠枝莲 / 兽面 / 壮锦，各约 34–37 秒）</td></tr>
+    <tr><td>配音</td><td><span class="todo">待填写 · 工具名称+版本</span></td><td>四段纹样解说语音</td></tr>
+    <tr><td>配乐</td><td><span class="todo">待填写 · 工具名称+版本</span></td><td>背景音乐（五声音阶，96 秒循环）</td></tr>
+    <tr><td>文案初稿</td><td><span class="todo">待填写 · 工具名称+版本</span></td><td>纹样解说文字的初稿</td></tr>
+    <tr><td>开发辅助</td><td><span class="todo">待填写 · 工具名称+版本</span></td><td>代码编写与调试辅助</td></tr>
+  </table>
+
+  <div class="note">
+    <strong>需要团队确认的一点：</strong>页面内四个纹样的<strong>演示动画本身不是 AI 生成的</strong>，
+    它们是人工编写的程序化矢量实现（SVG + JavaScript）。
+    如果实际使用中 AI 参与了代码编写，请在此注明；若未参与，请在提交前删除「开发辅助」一行，
+    避免虚报。
+  </div>
+
+  <h2>三 · 主要流程</h2>
+  <p>从一件实物到一段可播放的动画，管线分四步：</p>
+  <div class="grid">
+    <div class="card"><b>STEP 01 · 采集</b><span>博物馆藏品实拍、拓片或扫描件，正视角、平光</span></div>
+    <div class="card"><b>STEP 02 · 提线</b><span>提取结构线，剥离光影与材质，只留骨线</span></div>
+    <div class="card"><b>STEP 03 · 重绘</b><span>矢量化后人工简化锚点，归纳成可复用的几何规则</span></div>
+    <div class="card"><b>STEP 04 · 分镜</b><span>按构图层级编排时间轴，用描边偏移实现逐笔生长</span></div>
+  </div>
+  <p>
+    长卷本体（<strong>deck.html</strong>）为单文件纯静态页面，零外部依赖，
+    包含四个纹样章节、在地章节、馆藏章节与时间轴，全部动画由 JavaScript 实时驱动。
+  </p>
+
+  <h2>四 · 人工干预与二次创作</h2>
+  <ul>
+    <li><strong>考据与断代校订：</strong>四个纹样的源流、年代、寓意均经人工核对，不采用 AI 生成的历史叙述</li>
+    <li><strong>结构拆解：</strong>把每个纹样拆成骨架 / 母题 / 变体三层，是人工判断的结果</li>
+    <li><strong>矢量重绘：</strong>程序化图形（云纹螺旋、缠枝 S 形骨架、兽面对称、壮锦菱格、维斯台登纹、掌状脉、玫瑰晶簇）由人工编写生成规则</li>
+    <li><strong>材质处理：</strong>馆藏照片的去除背景、按内容边界裁切、统一调色，为人工处理</li>
+    <li><strong>交互与排印：</strong>滚动叙事、视差、揭示动画、明暗节奏，均为人工设计</li>
+    <li><strong>文案重写：</strong>AI 生成的文字初稿全部经过人工重写与事实校订</li>
+  </ul>
+
+  <h2>五 · 素材来源与合规</h2>
+  <h3>馆藏照片</h3>
+  <p>
+    页面中「在地」与「附录 · 馆藏」两节的标本照片，来自
+    <strong>桂林理工大学地质博物馆</strong>官网「馆藏精品」栏目
+    （<a href="http://dzbwg.glut.edu.cn/" style="color:#c9a25c">dzbwg.glut.edu.cn</a>），
+    为校属公开资料，用于本校教学与竞赛展示。
+    照片仅作去除背景、裁切与调色处理，未改变标本原貌。
+  </p>
+  <h3>未使用的内容</h3>
+  <div class="note">
+    作品<strong>未使用学校校徽及任何学校标识</strong>。初版曾在校徽位置使用学校标志，
+    考虑到标识使用需经授权，已全部移除；涉及学校之处仅以文字表述（校名、校训、校区），
+    属于事实性陈述。
+  </div>
+  <h3>字体与图形</h3>
+  <p>
+    页面所有纹样图形、地图式时间轴、图标均为程序化生成或手绘 SVG，
+    不使用第三方图库素材。正文字体使用系统自带宋体 / 楷体，不嵌入商用字体。
+  </p>
+
+  <h2>六 · 团队贡献</h2>
+  <table>
+    <tr><th>成员</th><th>分工</th><th>贡献占比</th></tr>
+    <tr><td><span class="todo">待填写</span></td><td><span class="todo">待填写</span></td><td><span class="todo">待填写</span></td></tr>
+    <tr><td><span class="todo">待填写</span></td><td><span class="todo">待填写</span></td><td><span class="todo">待填写</span></td></tr>
+    <tr><td><span class="todo">待填写</span></td><td><span class="todo">待填写</span></td><td><span class="todo">待填写</span></td></tr>
+  </table>
+
+  <h2>七 · 合规声明</h2>
+  <ul>
+    <li>AI 生成内容（影像短片、配音、配乐）已在页面内单独标注，未与人工内容混淆</li>
+    <li>作品不含违法违规、侵犯他人知识产权或肖像权的内容</li>
+    <li>所有引用资料已在页面内注明来源</li>
+    <li>AI 工具仅作为辅助手段，<strong>核心构思、结构判断与最终呈现由团队完成</strong></li>
+  </ul>
+
+  <div class="foot">
+    桂林理工大学 · 雁山校区<br>
+    2026 年第十四届全国大学生数字媒体科技作品及创意竞赛 · AIGC 类数字创意作品创作赛项
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>纹以载道 · 中国传统纹样数字长卷</title>
+<meta name="theme-color" content="#0e0c0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%239c3226'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23fbf3e2' font-family='KaiTi,serif'%3E纹%3C/text%3E%3C/svg%3E">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{min-height:100%;overflow-x:hidden;max-width:100%}
+  body{
+    font-family:"Songti SC","PingFang SC","Microsoft YaHei",serif;
+    background:
+      radial-gradient(900px 520px at 20% 0%,rgba(176,138,62,.14),transparent 62%),
+      radial-gradient(760px 480px at 88% 100%,rgba(156,50,38,.13),transparent 60%),#0e0c0a;
+    color:#efe6d4;padding:clamp(28px,7vw,64px) clamp(16px,5vw,32px) 56px;
+    display:flex;flex-direction:column;align-items:center;line-height:1.7;
+  }
+  .seal{
+    width:56px;height:56px;border-radius:8px;display:grid;place-items:center;position:relative;
+    background:linear-gradient(150deg,#b8452f,#9c3226);color:#fbf3e2;
+    font-family:"KaiTi","STKaiti",serif;font-size:26px;
+    box-shadow:0 8px 24px rgba(156,50,38,.4);margin-bottom:18px;
+    animation:up .7s cubic-bezier(.16,1,.3,1) both;
+  }
+  .seal::after{content:"";position:absolute;inset:5px;border:1px solid rgba(255,255,255,.42);border-radius:5px}
+  @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  h1{
+    font-family:"KaiTi","STKaiti",serif;font-weight:400;
+    font-size:clamp(28px,7.5vw,46px);letter-spacing:.18em;text-indent:.18em;
+    background:linear-gradient(175deg,#f6ead0 12%,#dcb877 52%,#b78b45 88%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-align:center;animation:up .8s .08s cubic-bezier(.16,1,.3,1) both;
+  }
+  .sub{
+    margin-top:10px;font-size:clamp(12px,3.4vw,14px);letter-spacing:.32em;text-indent:.32em;
+    color:#9a8d74;text-align:center;animation:up .8s .16s cubic-bezier(.16,1,.3,1) both;
+  }
+
+  .cards{width:100%;max-width:520px;min-width:0;margin-top:clamp(24px,5vw,38px);
+    display:flex;flex-direction:column;gap:12px}
+
+  a.card{
+    display:block;text-decoration:none;color:inherit;min-width:0;max-width:100%;
+    background:rgba(255,255,255,.045);border:1px solid rgba(201,162,92,.26);
+    border-radius:16px;padding:16px 18px;
+    transition:transform .3s cubic-bezier(.16,1,.3,1),background .3s,border-color .3s;
+    animation:up .8s cubic-bezier(.16,1,.3,1) both;
+  }
+  a.card:nth-child(1){animation-delay:.22s}
+  a.card:nth-child(2){animation-delay:.3s}
+  a.card:nth-child(3){animation-delay:.38s}
+  a.card:active{transform:scale(.985)}
+  @media (hover:hover){a.card:hover{transform:translateY(-3px);background:rgba(255,255,255,.09);border-color:rgba(201,162,92,.5)}}
+
+  .card .top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .card .name{font-family:"KaiTi","STKaiti",serif;font-size:clamp(18px,4.8vw,23px);letter-spacing:.08em}
+  .card .badge{margin-left:auto;font-size:11px;letter-spacing:.1em;color:#8d8270}
+  .card .desc{margin-top:6px;font-size:clamp(12px,3.3vw,13.5px);color:#a99d87;line-height:1.7}
+
+  .card.main{
+    border-color:rgba(184,69,47,.55);background:rgba(156,50,38,.14);
+    padding:22px 20px;
+  }
+  .card.main .name{font-size:clamp(21px,5.6vw,27px)}
+  .card.main .go{
+    margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;
+    width:100%;padding:14px;border-radius:12px;
+    background:linear-gradient(150deg,#b8452f,#9c3226);
+    color:#fdf4e4;font-size:15px;letter-spacing:.18em;text-indent:.18em;
+    box-shadow:0 10px 26px rgba(156,50,38,.36);
+  }
+
+  .dl-group{margin-top:clamp(22px,4vw,32px);width:100%;max-width:520px;min-width:0}
+  .dl-title{
+    font-size:12px;letter-spacing:.3em;text-indent:.3em;color:#7d7361;
+    display:flex;align-items:center;gap:12px;margin-bottom:12px;
+  }
+  .dl-title::before,.dl-title::after{content:"";flex:1;height:1px;background:rgba(201,162,92,.18)}
+
+  .dl{
+    display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;
+    padding:13px 16px;border-radius:12px;
+    background:rgba(255,255,255,.03);border:1px solid rgba(201,162,92,.16);
+    transition:background .3s,border-color .3s;
+  }
+  .dl + .dl{margin-top:9px}
+  .dl:active{background:rgba(255,255,255,.08)}
+  @media (hover:hover){.dl:hover{background:rgba(255,255,255,.08);border-color:rgba(201,162,92,.36)}}
+  .dl .n{font-family:"KaiTi","STKaiti",serif;font-size:15px;letter-spacing:.06em}
+  .dl .s{margin-left:auto;font-size:11.5px;color:#7d7361;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .dl .ico{color:#c9a25c;font-size:15px}
+
+  .tips{width:100%;max-width:520px;min-width:0;margin-top:clamp(24px,5vw,36px);
+    font-size:12.5px;line-height:2;color:#7d7361;
+    animation:up .8s .5s cubic-bezier(.16,1,.3,1) both}
+  .tips b{color:#c9a25c;font-weight:400}
+  .tips .li{margin-left:16px;margin-top:4px}
+  .foot{margin-top:clamp(26px,5vw,40px);font-size:11px;letter-spacing:.26em;color:#5c5446;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="seal">纹</div>
+<h1>纹以载道</h1>
+<div class="sub">中国传统纹样数字长卷</div>
+
+<div class="cards">
+
+  <a class="card main" href="deck.html">
+    <div class="top">
+      <span class="name">进入长卷</span>
+      <span class="badge">在线浏览 · 无需下载</span>
+    </div>
+    <div class="desc">四个纹样 · 动画 / 影像 / 实物三联并置 · 一路向下滚动</div>
+    <div class="go">→ 立即打开</div>
+  </a>
+
+  <a class="card" href="kiosk.html">
+    <div class="top">
+      <span class="name">展台版</span>
+      <span class="badge">单页切换</span>
+    </div>
+    <div class="desc">四个纹样均带讲解视频，适合触摸屏展陈</div>
+  </a>
+
+  </div>
+
+<p class="note-nodl">需要离线压缩包（各约 38 MB）？联系作者索取 —— 本站为在线演示，不托管大文件。</p>
+
+<style>.note-nodl{width:100%;max-width:520px;margin:20px auto 0;font-size:12.5px;line-height:1.9;color:#7d7361;text-align:center}</style>
+
+<div class="tips">
+  <b>手机上怎么看？</b>
+  <div class="li">直接点上面「进入长卷」就行，不用下载。建议横屏全屏。</div>
+  <b style="display:block;margin-top:12px">四个纹样</b>
+  <div class="li">云纹 · 缠枝莲纹 · 青铜兽面纹 · 壮锦几何纹</div>
+  <div class="li">每个纹样都由「动画演绎 / 影像短片 / 器物实物」三联并置。</div>
+</div>
+<div class="foot">AIGC 类数字创意作品 · 中国传统纹样数字长卷</div>
+
+</body>
+</html>
